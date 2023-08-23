@@ -1,0 +1,15 @@
+.pw-box {
+    display: flex;
+    align-items: center;
+    border-color: black;
+    width: 100%;
+    position: relative;
+}
+
+
+.close-icon {
+    position: absolute;
+    right: 5px;
+    width: 20px; /* Ajustez la taille en conséquence */
+    height: auto;
+}
