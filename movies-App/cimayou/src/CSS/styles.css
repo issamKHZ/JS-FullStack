@@ -4,15 +4,14 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #f5f7f7;
+.login-pad {
+  background: #ffffff;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
   height: 100vh;
-  margin: -20px 0 50px;
+  margin: 0 0 50px 25%;
 }
 /*
 #f6f5f7

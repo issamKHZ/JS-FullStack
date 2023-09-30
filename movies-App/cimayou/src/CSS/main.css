@@ -1,0 +1,56 @@
+.categorie-bar {
+    background-color: rgb(7, 114, 146);
+    display: flex;
+    flex-direction: row;
+    gap: 40%;
+    height: 60px;
+    align-items: center;
+}
+
+.two-dropdown{
+    padding-left: 40px;
+    padding-right: 40px;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cat-txt {
+    font-size: 2em ;
+    font-weight: bolder;
+    font-style: italic;
+    color: rgb(10, 6, 68);
+    position: relative;
+    right: 5%;
+}
+
+
+.filtre-and-grid {
+    border-top: 20px solid rgba(68, 102, 116, 0.692);
+    background-color: #0e24e7e3;    
+}
+
+.grid-main {    
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 310px 310px 310px 310px;
+    flex-grow: 1;
+    background-image: linear-gradient(to bottom, #2235e4de, #0ebad8);
+    row-gap: 20px;
+    justify-content: center;   
+    
+}
+
+.grid-item {
+    position: relative;
+    left: 30px;
+    align-self: center; 
+    text-align: center;
+}
+
+.extra {
+    height: 100px;
+    background-color: #0ebad8;
+    border-bottom: 20px solid rgba(68, 102, 116, 0.692);
+}

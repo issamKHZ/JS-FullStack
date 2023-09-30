@@ -2,10 +2,10 @@ import React from "react";
 import * as Components from './Components';
 import { useState } from "react";
 import '../CSS/login.css';
-import close from '../eye-icons/eye-close.png';
-import open from '../eye-icons/eye-open.png';
+import close from '../images/eye-close.png';
+import open from '../images/eye-open.png';
 
-function App() {
+function Login() {
     
     const [signIn, toggle] = useState(true);
     const [showPassword, setShowPassword] = useState(false);
@@ -78,4 +78,4 @@ function App() {
      )
 }
 
-export default App;
+export default Login;

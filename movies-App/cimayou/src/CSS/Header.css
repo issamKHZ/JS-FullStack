@@ -1,0 +1,61 @@
+
+.headerBanner {
+    display: flex;
+    /*justify-content: center;*/
+    height: 50px;
+    background: linear-gradient(to right, #76dfd9, #6092ee);
+    /*border-bottom: 2px solid #ccc;*/
+    position: relative;
+  }
+  
+
+  .site-name {
+      color: #201f1a;
+      font-style: italic;
+      position: relative;           
+      font-size: 35px;
+      z-index: 999;
+      bottom: 85px;
+  }
+  
+  .search-bar {
+      width: 550px;
+      border: 3px solid rgb(41, 60, 90);
+      border-radius: 20px;
+      padding: 10px;      
+      position: relative;
+      left: 40%;
+      top: 3px;
+      background-color: #a3b6dad0;
+  }
+  
+  
+  .account-click {      
+      position: absolute;  
+      display: flex;
+      align-items: center; /* Centre verticalement */
+      gap: 10px; /* Espace horizontal entre les éléments */
+      right: 2%;      
+      top: 19%;
+      border: none;
+      background-color: transparent;
+      color: #1a1713;
+      font-weight: bold;
+      font-size: 1.3em;
+      cursor: pointer;
+  }
+
+  .account-click:hover {
+    background-color: #707a8d81;
+    border-radius: 10px;
+    padding: 2px;
+    padding-right: 8px;    
+  }
+  
+
+  .account-logo {
+    position: relative;
+    width: 25px;
+    left: 5px;
+  }
+  
