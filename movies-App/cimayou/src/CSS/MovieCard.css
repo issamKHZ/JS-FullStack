@@ -1,5 +1,6 @@
 .card-container {
     width: 250px;
+    height: auto;
     border: 5px solid #cef4fde1;
     border-radius: 8px;
     overflow: hidden;
@@ -21,6 +22,7 @@
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
   }
   
   .movie-title {
@@ -30,19 +32,19 @@
     width: 100%;
     background-color: rgba(5, 141, 130, 0.863);
     color: white;
-    padding: 10px;
+    padding: 6%;
     box-sizing: border-box;
     text-align: center;
   }
   
   .movie-description {
     position: absolute;
-    bottom: 11%;
+    bottom: 13%;
     left: 0;
     width: 100%;
     background-color: rgba(128, 241, 232, 0.7);
     color: black;
-    padding: 20px;
+    padding: 10%;
     box-sizing: border-box;
     opacity: 0;
     transform: translateY(100%);

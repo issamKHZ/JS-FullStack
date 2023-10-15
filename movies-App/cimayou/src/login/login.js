@@ -1,17 +1,45 @@
 import React from "react";
 import * as Components from './Components';
 import { useState } from "react";
-import '../CSS/login.css';
 import close from '../images/eye-close.png';
 import open from '../images/eye-open.png';
+
+import '../CSS/login.css';
 
 function Login() {
     
     const [signIn, toggle] = useState(true);
     const [showPassword, setShowPassword] = useState(false);
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+
     const handlePasswordVisibility = () => {
         setShowPassword(!showPassword);
+    };
 
+    const handleSubmit = async (e) => {        
+        e.preventDefault();
+              
+        try {
+            
+            const response = await fetch('http://localhost:3000/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+            });
+            if (response.ok) {
+                console.log('Login réussi');
+            } else {
+                // Afficher un message d'erreur
+                console.log('Erreur lors de la connexion');
+            }
+        } catch (error) {
+            console.error('Erreur:', error);
+        }
     };
 
      return(
@@ -26,25 +54,28 @@ function Login() {
                         <img className="close-icon" 
                              src={showPassword ? open : close} 
                              alt=""
-                             onClick={handlePasswordVisibility}/>                        
+                             onClick={handlePasswordVisibility}/>                                                
                       </div>
+                      <div><h>${email}</h></div>
                      <Components.Button>Register</Components.Button>
                  </Components.Form>
              </Components.SignUpContainer>
 
              <Components.SignInContainer signinIn={signIn}>
-                  <Components.Form>
-                      <Components.Title>Sign in</Components.Title>
-                      <Components.Input type='email' placeholder='Email' />
+                  <Components.Form onSubmit={handleSubmit}>
+                      <Components.Title>Sign in {email}</Components.Title>
+                      <Components.Input type='email' placeholder='Email' value={email}
+                          onChange={(e) => setEmail(e.target.value)}/>
                       <div className="pw-box">                        
-                        <Components.InputPw type={showPassword ? 'text' : 'password'} placeholder='Password' />
+                        <Components.InputPw type={showPassword ? 'text' : 'password'} placeholder='Password' value={password}
+                            onChange={(e) => setPassword(e.target.value)} />
                         <img className="close-icon" 
                              src={showPassword ? open : close} 
-                             alt=""
+                             alt=""                             
                              onClick={handlePasswordVisibility}/>                        
                       </div>
                       <Components.Anchor href='#'>Forgot your password?</Components.Anchor>
-                      <Components.Button>Sigin In</Components.Button>
+                      <Components.Button type="submit">Sign In</Components.Button>
                   </Components.Form>
              </Components.SignInContainer>
 

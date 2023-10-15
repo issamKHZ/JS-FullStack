@@ -3,7 +3,8 @@ import { useState } from 'react';
 import './App.css';
 import Description from './player/description';
 import MoviePage from './MovieFolder/moviePage';
-import RatingDemo from './player/ratingDemo';
+import Player from './player/player';
+import LoginHome from './login/login-home';
 
 function App() {
 
@@ -14,13 +15,14 @@ function App() {
   }
   
   return (
-    <div>
+    <div className='original-container'>
       {currentPage === "origin" ? (
         <div className='origin'>
           <button className='home' onClick={() => handleChangeForm("home")}> Home </button>
           <button className='home' onClick={() => handleChangeForm("home2")}> Home2 </button>
           <button className='home' onClick={() => handleChangeForm("description")}> description </button>
-          <button className='home' onClick={() => handleChangeForm("rating")}> rating </button>
+          <button className='home' onClick={() => handleChangeForm("player")}> player </button>
+          <button className='home' onClick={() => handleChangeForm("login")}> login </button>
         </div>
       ) : currentPage === "home" ? (
         <Home changeForm={handleChangeForm}/>
@@ -28,8 +30,10 @@ function App() {
         <MoviePage changeForm={handleChangeForm}/>
       ) : currentPage === "description" ? (
         <Description changeForm={handleChangeForm} />
-      ) : currentPage === "rating" ? (
-        <RatingDemo changeForm={handleChangeForm} />
+      ) : currentPage === "player" ? (
+        <Player changeForm={handleChangeForm} filmName={"The Mechanic"} />
+      ) : currentPage === "login" ? (
+        <LoginHome changeForm={handleChangeForm} />
       ) : null}
     </div>
     

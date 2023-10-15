@@ -27,6 +27,23 @@
     font-weight: bold;
 }
 
+.global-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.ttrois {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.uun {
+    display: flex;
+    justify-content: center;
+    
+}
+
 .des-title .sentence {
     font-size: 35px;
     font-weight: bold;
@@ -107,7 +124,8 @@
 
 
 .des-buttons {
-    width: 350px;
+    width: 90%;
+    margin-top: 10%;
 }
 
 .display-buttons {
@@ -158,8 +176,9 @@
   border-radius: 5px;
   overflow: auto;
   max-height: 200px;
-  max-width: 300px;
+  max-width: 400px;
   border-bottom: 8px solid #0e104ec7;
+  box-shadow: 0px 5px 5px #160b25;
 }
 
 .des-story .story-text {
@@ -172,6 +191,12 @@
     float: right;
     margin-bottom: 10px;
     margin-top: 0;
+}
+
+.story-covert {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 .des-story p{
@@ -189,8 +214,7 @@
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
-    cursor: pointer;
-    border-radius: 4px;
+    cursor: pointer;    
     overflow: hidden;
     position: relative;
     font-weight: bold;
@@ -236,6 +260,7 @@
     position: absolute;
 }
 
+
 .tags {
     display: grid;
     grid-template-columns: 250px 250px;
@@ -276,7 +301,8 @@
     transform: translate(-30%) translateY(0);
 }
 
-.font {
+.display-buttons .font,
+.extra-buttons .font {
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import MovieCard from './MovieCard'; // Assurez-vous de fournir le bon chemin vers le composant MovieCard
-import poster from '../images/poster-mecanic.jpeg';
+import poster from '../images/poster-mecanic.jpg';
 
 import '../CSS/LastestMovies.css';
 

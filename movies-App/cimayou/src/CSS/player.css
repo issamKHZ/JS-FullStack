@@ -1,0 +1,171 @@
+.play-container {
+    width: 100%;
+    height: 1fr;
+    background-image: url('../images/cool-background.png');
+    background-size: cover;
+    background-position: 0;
+    background-position-x: 0px;
+    background-position-y: center;
+    background-repeat: no-repeat;
+}
+
+.play-main {    
+    height: 600px;
+    margin: 40px 60px;
+    filter: brightness(100%);
+    position: relative; 
+    z-index: 1000; 
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.play-video {
+    width: 85%;
+    height: 75%;
+    margin-top: 3%;
+}
+
+.movie-player {
+    height: 88%;
+    position: relative;
+    z-index: 1000
+}
+
+.under-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 10px;     
+    background-color: #2f1d92a4;
+  }
+  
+  
+.previous-next {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.previous-next button {
+    padding: 10% 30%;
+    display: flex;
+    flex-direction: row;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;    
+    overflow: hidden;
+    position: relative;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.light-off-on {
+  position: relative; 
+  z-index: 9999; 
+  filter: brightness(110%);
+}
+
+.light-off-on .light {
+    background-color: rgba(235, 206, 77, 0.911);
+    border: none;
+    border-radius: 10px;
+    margin-right: 20px;
+    padding: 5px 20px;    
+}
+
+.light-off-on .light.yellow {
+     background-color: rgba(87, 84, 72, 0.911);
+}
+
+.light-off-on .font {
+    font-size: 20px;
+}
+
+/* Styles pour le div sombre */
+.dark-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Couleur sombre transparente */
+    display: none; /* Par défaut, masquez-le */
+    z-index: 999; /* Assurez-vous qu'il est au-dessus de tout le contenu */
+}
+
+.dark-overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.295); /* Couleur sombre transparente */
+    display: none; /* Par défaut, masquez-le */
+    z-index: 999; /* Assurez-vous qu'il est au-dessus de tout le contenu */
+}
+  
+/* Style pour le div sombre lorsqu'il est visible */
+.dark-overlay.visible,
+.dark-overlay2.visible {
+    display: block;
+}
+
+.play-controller {
+    background-color: #2f1d92a4;
+    width: 25%;
+    height: auto;
+    margin-top: 3%;
+    border-radius: 2px 2px 12px 12px;
+    border-bottom: 8px solid rgba(10, 12, 59, 0.78);
+    box-shadow: 0px 5px 5px #160b25;
+    
+}
+
+.play-controller .three-buttons {    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;    
+    box-sizing: border-box; 
+    width: 100%;
+    height: auto;
+    gap: 1px;
+    
+}
+
+.play-controller .three-buttons .button {
+    padding: 20px 0;
+    border: none;
+    background-color: #2f1d927c;
+    color: rgb(28, 6, 56);
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 0 0 6px 6px;
+    cursor: pointer;    
+    overflow: hidden;
+}
+
+.pre-choice-list {
+    overflow: auto;
+    max-height: 90%; 
+}
+
+
+.choices-list table {
+    width: 100%;    
+}
+
+.choices-list td {
+    width: 100%;
+    padding: 14px 0 14px 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.choices-list .Background.dark {
+    background-color: rgba(36, 30, 30, 0.13);
+}

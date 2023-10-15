@@ -1,7 +1,8 @@
 import React from 'react';
-import "../CSS/Header.css";
 import logo1 from '../images/logo.png'
 import accountLogo from '../images/account.png'
+
+import "../CSS/Header.css";
 
 
 function HeaderBanner(props) {
@@ -22,10 +23,11 @@ function HeaderBanner(props) {
   }
 
   return (
-      <div className="headerBanner">        
-      <img className='site-logo' src={logo1} alt='nada'></img>
-      <h1 className='site-name'>CimaNow</h1>
-      <button className='revert' onClick={handleGoToOrigin}>revert</button>
+      <div className="headerBanner">      
+      <div className='div-logo'>
+        <img className='site-logo' src={logo1} alt='nada' onClick={handleGoToOrigin}></img>
+        <h className='site-name' onClick={handleGoToOrigin}>CimaNow</h>      
+      </div>  
         <div className='search'>
           <input type="text" placeholder="find you movie..." class="search-bar" />
           <i class="fa-solid fa-magnifying-glass"></i>          
