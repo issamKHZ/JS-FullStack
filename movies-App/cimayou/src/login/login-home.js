@@ -8,10 +8,7 @@ export default function LoginHome(props) {
   return (
     <div className='Container'>
         <header className="App-header"></header>
-        <body className='App-body'>                
-            {/*<div className='header'>
-                <HeaderBanner changeForm = {props.changeForm}/>        
-  </div>*/}                  
+        <body className='App-body'>                                         
             <div className='login-pad'>
                 <Login />
             </div>                       

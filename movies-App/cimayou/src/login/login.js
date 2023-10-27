@@ -19,28 +19,6 @@ function Login() {
         setShowPassword(!showPassword);
     };
 
-    const handleSubmit = async (e) => {        
-        e.preventDefault();
-              
-        try {
-            
-            const response = await fetch('http://localhost:3000/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email, password }),
-            });
-            if (response.ok) {
-                console.log('Login réussi');
-            } else {
-                // Afficher un message d'erreur
-                console.log('Erreur lors de la connexion');
-            }
-        } catch (error) {
-            console.error('Erreur:', error);
-        }
-    };
 
      return(
          <Components.Container>
@@ -62,7 +40,7 @@ function Login() {
              </Components.SignUpContainer>
 
              <Components.SignInContainer signinIn={signIn}>
-                  <Components.Form onSubmit={handleSubmit}>
+                  <Components.Form>
                       <Components.Title>Sign in {email}</Components.Title>
                       <Components.Input type='email' placeholder='Email' value={email}
                           onChange={(e) => setEmail(e.target.value)}/>
